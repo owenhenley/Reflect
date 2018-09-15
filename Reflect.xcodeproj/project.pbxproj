@@ -638,15 +638,17 @@
 			baseConfigurationReference = 1C692BFDAB0BFDB097D84490 /* Pods-Reflect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
-				INFOPLIST_FILE = "$(SRCROOT)/ReflectUITests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Reflect/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.owenhenley.Reflect;
+				PRODUCT_BUNDLE_IDENTIFIER = io.owenhenley.reflect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -657,15 +659,17 @@
 			baseConfigurationReference = DE3F1EABC8CBDE4846B2D6A2 /* Pods-Reflect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYZA2EE6W8;
-				INFOPLIST_FILE = "$(SRCROOT)/ReflectUITests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Reflect/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.owenhenley.Reflect;
+				PRODUCT_BUNDLE_IDENTIFIER = io.owenhenley.reflect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
