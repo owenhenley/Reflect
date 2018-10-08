@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K6N-pL-5RX">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginVC-->
+        <scene sceneID="plW-yL-0LQ">
+            <objects>
+                <viewController id="K6N-pL-5RX" customClass="LoginVC" customModule="Reflect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NIU-J0-Ccu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-LT-Ofz">
+                                <rect key="frame" x="20" y="252.5" width="335" height="162"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="IJd-lc-Vyl">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="124"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="hZT-72-dIP">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="69"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YiO-Sy-pYc">
+                                                        <rect key="frame" x="33.5" y="0.0" width="268" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUX-uA-8N0">
+                                                        <rect key="frame" x="33.5" y="39" width="268" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="NUX-uA-8N0" firstAttribute="width" secondItem="hZT-72-dIP" secondAttribute="width" multiplier="0.8" id="1yF-yb-tkd"/>
+                                                    <constraint firstItem="YiO-Sy-pYc" firstAttribute="width" secondItem="hZT-72-dIP" secondAttribute="width" multiplier="0.8" id="Zw6-VL-rUZ"/>
+                                                </constraints>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-Wa-89f">
+                                                <rect key="frame" x="146.5" y="94" width="42" height="30"/>
+                                                <state key="normal" title="Login!"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hZT-72-dIP" firstAttribute="width" secondItem="IJd-lc-Vyl" secondAttribute="width" id="Qja-Rb-uWx"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-wX-z0K">
+                                        <rect key="frame" x="0.0" y="132" width="34" height="30"/>
+                                        <state key="normal" title="Back"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IJd-lc-Vyl" firstAttribute="top" secondItem="nvW-LT-Ofz" secondAttribute="top" id="EwM-hz-1RI"/>
+                                    <constraint firstAttribute="trailing" secondItem="IJd-lc-Vyl" secondAttribute="trailing" id="JFa-oi-0pc"/>
+                                    <constraint firstItem="IJd-lc-Vyl" firstAttribute="leading" secondItem="nvW-LT-Ofz" secondAttribute="leading" id="kz8-z6-9gp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nvW-LT-Ofz" firstAttribute="leading" secondItem="bTV-K8-6U8" secondAttribute="leading" constant="20" id="59R-38-YPd"/>
+                            <constraint firstItem="nvW-LT-Ofz" firstAttribute="centerY" secondItem="NIU-J0-Ccu" secondAttribute="centerY" id="DYo-hS-6aw"/>
+                            <constraint firstItem="bTV-K8-6U8" firstAttribute="trailing" secondItem="nvW-LT-Ofz" secondAttribute="trailing" constant="20" id="vA6-nD-ubt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bTV-K8-6U8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZX-RU-n9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="128"/>
+        </scene>
+    </scenes>
+</document>

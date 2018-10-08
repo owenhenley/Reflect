@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		1D4CA545E06AB2B1DC76E948 /* Pods_ReflectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DDFC89D3ADF2366BBCE5149 /* Pods_ReflectTests.framework */; };
+		3E172558216AFC0200DF13F4 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E172557216AFC0200DF13F4 /* LoginScreen.storyboard */; };
+		3E17255A216AFC1300DF13F4 /* SignUpScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E172559216AFC1300DF13F4 /* SignUpScreen.storyboard */; };
+		3E17255C216AFE7E00DF13F4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17255B216AFE7E00DF13F4 /* Profile.storyboard */; };
+		3E17255E216AFED700DF13F4 /* MeditationsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17255D216AFED700DF13F4 /* MeditationsScreen.storyboard */; };
+		3E172560216AFF2200DF13F4 /* PlayMeditation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E17255F216AFF2200DF13F4 /* PlayMeditation.storyboard */; };
+		3E172563216B013B00DF13F4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172562216B013B00DF13F4 /* SignUpVC.swift */; };
+		3E172565216B015100DF13F4 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172564216B015100DF13F4 /* LoginVC.swift */; };
+		3E172567216B018700DF13F4 /* PlayMeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172566216B018700DF13F4 /* PlayMeditationVC.swift */; };
+		3E172569216B019800DF13F4 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172568216B019800DF13F4 /* ProfileVC.swift */; };
+		3E17256B216B01AD00DF13F4 /* MeditationsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17256A216B01AD00DF13F4 /* MeditationsScreenVC.swift */; };
+		3E17256D216B01E400DF13F4 /* TabBarControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17256C216B01E400DF13F4 /* TabBarControllerVC.swift */; };
+		3E17256F216B080700DF13F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E17256E216B080700DF13F4 /* GoogleService-Info.plist */; };
 		3EE0E8A62148966A005A798A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0E8A52148966A005A798A /* AppDelegate.swift */; };
-		3EE0E8AB2148966A005A798A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0E8A92148966A005A798A /* Main.storyboard */; };
+		3EE0E8AB2148966A005A798A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0E8A92148966A005A798A /* TabBar.storyboard */; };
 		3EE0E8AD2148966C005A798A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0E8AC2148966C005A798A /* Assets.xcassets */; };
 		3EE0E8B02148966C005A798A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EE0E8AE2148966C005A798A /* LaunchScreen.storyboard */; };
 		3EE0E8BB2148966C005A798A /* ReflectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE0E8BA2148966C005A798A /* ReflectTests.swift */; };
@@ -39,9 +51,21 @@
 		0DDFC89D3ADF2366BBCE5149 /* Pods_ReflectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReflectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C692BFDAB0BFDB097D84490 /* Pods-Reflect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reflect.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reflect/Pods-Reflect.debug.xcconfig"; sourceTree = "<group>"; };
 		1DF6D0E03390DDCC69DC07CC /* Pods_Reflect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reflect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E172557216AFC0200DF13F4 /* LoginScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
+		3E172559216AFC1300DF13F4 /* SignUpScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpScreen.storyboard; sourceTree = "<group>"; };
+		3E17255B216AFE7E00DF13F4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		3E17255D216AFED700DF13F4 /* MeditationsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MeditationsScreen.storyboard; sourceTree = "<group>"; };
+		3E17255F216AFF2200DF13F4 /* PlayMeditation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayMeditation.storyboard; sourceTree = "<group>"; };
+		3E172562216B013B00DF13F4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		3E172564216B015100DF13F4 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		3E172566216B018700DF13F4 /* PlayMeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMeditationVC.swift; sourceTree = "<group>"; };
+		3E172568216B019800DF13F4 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		3E17256A216B01AD00DF13F4 /* MeditationsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsScreenVC.swift; sourceTree = "<group>"; };
+		3E17256C216B01E400DF13F4 /* TabBarControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerVC.swift; sourceTree = "<group>"; };
+		3E17256E216B080700DF13F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3EE0E8A22148966A005A798A /* Reflect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reflect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE0E8A52148966A005A798A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3EE0E8AA2148966A005A798A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3EE0E8AA2148966A005A798A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		3EE0E8AC2148966C005A798A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EE0E8AF2148966C005A798A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3EE0E8B12148966C005A798A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +111,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E172561216B00AF00DF13F4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3EE0E8AE2148966C005A798A /* LaunchScreen.storyboard */,
+				3EE0E8A92148966A005A798A /* TabBar.storyboard */,
+				3E17255D216AFED700DF13F4 /* MeditationsScreen.storyboard */,
+				3E17255B216AFE7E00DF13F4 /* Profile.storyboard */,
+				3E17255F216AFF2200DF13F4 /* PlayMeditation.storyboard */,
+				3E172557216AFC0200DF13F4 /* LoginScreen.storyboard */,
+				3E172559216AFC1300DF13F4 /* SignUpScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		3EE0E8992148966A005A798A = {
 			isa = PBXGroup;
 			children = (
@@ -112,11 +150,10 @@
 		3EE0E8A42148966A005A798A /* Reflect */ = {
 			isa = PBXGroup;
 			children = (
-				3EE0E8DA21489890005A798A /* Firebase */,
+				3EE0E8DB214898A6005A798A /* Extensions */,
 				3EE0E8D3214896BE005A798A /* Models */,
 				3EE0E8D5214896D9005A798A /* Controllers */,
-				3EE0E8D4214896CB005A798A /* UI */,
-				3EE0E8DB214898A6005A798A /* Extensions */,
+				3EE0E8D4214896CB005A798A /* Views */,
 				3EE0E8D921489888005A798A /* Resources */,
 			);
 			path = Reflect;
@@ -147,14 +184,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		3EE0E8D4214896CB005A798A /* UI */ = {
+		3EE0E8D4214896CB005A798A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3EE0E8AE2148966C005A798A /* LaunchScreen.storyboard */,
-				3EE0E8A92148966A005A798A /* Main.storyboard */,
-				3EE0E8D6214896E6005A798A /* Views */,
+				3E172561216B00AF00DF13F4 /* Storyboards */,
+				3EE0E8D6214896E6005A798A /* Custom Views */,
 			);
-			path = UI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		3EE0E8D5214896D9005A798A /* Controllers */ = {
@@ -166,16 +202,22 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		3EE0E8D6214896E6005A798A /* Views */ = {
+		3EE0E8D6214896E6005A798A /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Views;
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		3EE0E8D7214896ED005A798A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3E172564216B015100DF13F4 /* LoginVC.swift */,
+				3E172562216B013B00DF13F4 /* SignUpVC.swift */,
+				3E172566216B018700DF13F4 /* PlayMeditationVC.swift */,
+				3E172568216B019800DF13F4 /* ProfileVC.swift */,
+				3E17256A216B01AD00DF13F4 /* MeditationsScreenVC.swift */,
+				3E17256C216B01E400DF13F4 /* TabBarControllerVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -193,15 +235,9 @@
 				3EE0E8AC2148966C005A798A /* Assets.xcassets */,
 				3EE0E8A52148966A005A798A /* AppDelegate.swift */,
 				3EE0E8B12148966C005A798A /* Info.plist */,
+				3E17256E216B080700DF13F4 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		3EE0E8DA21489890005A798A /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Firebase;
 			sourceTree = "<group>";
 		};
 		3EE0E8DB214898A6005A798A /* Extensions */ = {
@@ -343,9 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E17255C216AFE7E00DF13F4 /* Profile.storyboard in Resources */,
+				3E17255A216AFC1300DF13F4 /* SignUpScreen.storyboard in Resources */,
+				3E17256F216B080700DF13F4 /* GoogleService-Info.plist in Resources */,
 				3EE0E8B02148966C005A798A /* LaunchScreen.storyboard in Resources */,
 				3EE0E8AD2148966C005A798A /* Assets.xcassets in Resources */,
-				3EE0E8AB2148966A005A798A /* Main.storyboard in Resources */,
+				3E172560216AFF2200DF13F4 /* PlayMeditation.storyboard in Resources */,
+				3E172558216AFC0200DF13F4 /* LoginScreen.storyboard in Resources */,
+				3E17255E216AFED700DF13F4 /* MeditationsScreen.storyboard in Resources */,
+				3EE0E8AB2148966A005A798A /* TabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,15 +435,31 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Reflect/Pods-Reflect-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -481,7 +539,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E17256D216B01E400DF13F4 /* TabBarControllerVC.swift in Sources */,
+				3E17256B216B01AD00DF13F4 /* MeditationsScreenVC.swift in Sources */,
+				3E172569216B019800DF13F4 /* ProfileVC.swift in Sources */,
+				3E172563216B013B00DF13F4 /* SignUpVC.swift in Sources */,
 				3EE0E8A62148966A005A798A /* AppDelegate.swift in Sources */,
+				3E172567216B018700DF13F4 /* PlayMeditationVC.swift in Sources */,
+				3E172565216B015100DF13F4 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,12 +581,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3EE0E8A92148966A005A798A /* Main.storyboard */ = {
+		3EE0E8A92148966A005A798A /* TabBar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3EE0E8AA2148966A005A798A /* Base */,
 			);
-			name = Main.storyboard;
+			name = TabBar.storyboard;
 			sourceTree = "<group>";
 		};
 		3EE0E8AE2148966C005A798A /* LaunchScreen.storyboard */ = {
