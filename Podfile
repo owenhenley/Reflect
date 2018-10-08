@@ -8,6 +8,9 @@ target 'Reflect' do
   # Pods for Reflect
 
 pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Storage'
+pod 'Firebase/Firestore'
 
   target 'ReflectTests' do
     inherit! :search_paths
