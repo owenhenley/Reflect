@@ -18,10 +18,11 @@
 #include <grpc/support/port_platform.h>
 
 #include "src/core/lib/iomgr/port.h"
-#if GRPC_ARES == 1 && !defined(GRPC_UV)
+#if GRPC_ARES == 1 && defined(GRPC_POSIX_SOCKET_ARES_EV_DRIVER)
 
 #include <ares.h>
 #include <string.h>
+#include <sys/ioctl.h>
 
 #include "src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_ev_driver.h"
 
@@ -31,6 +32,7 @@
 #include <grpc/support/time.h>
 #include "src/core/ext/filters/client_channel/resolver/dns/c_ares/grpc_ares_wrapper.h"
 #include "src/core/lib/gpr/string.h"
+#include "src/core/lib/iomgr/ev_posix.h"
 #include "src/core/lib/iomgr/iomgr_internal.h"
 #include "src/core/lib/iomgr/sockaddr_utils.h"
 
@@ -74,8 +76,6 @@ struct grpc_ares_ev_driver {
   bool shutting_down;
   /** request object that's using this ev driver */
   grpc_ares_request* request;
-  /** Owned by the ev_driver. Creates new GrpcPolledFd's */
-  grpc_core::UniquePtr<grpc_core::GrpcPolledFdFactory> polled_fd_factory;
 };
 
 static void grpc_ares_notify_on_event_locked(grpc_ares_ev_driver* ev_driver);
@@ -95,7 +95,7 @@ static void grpc_ares_ev_driver_unref(grpc_ares_ev_driver* ev_driver) {
     GRPC_COMBINER_UNREF(ev_driver->combiner, "free ares event driver");
     ares_destroy(ev_driver->channel);
     grpc_ares_complete_request_locked(ev_driver->request);
-    grpc_core::Delete(ev_driver);
+    gpr_free(ev_driver);
   }
 }
 
@@ -120,11 +120,13 @@ grpc_error* grpc_ares_ev_driver_create_locked(grpc_ares_ev_driver** ev_driver,
                                               grpc_pollset_set* pollset_set,
                                               grpc_combiner* combiner,
                                               grpc_ares_request* request) {
-  *ev_driver = grpc_core::New<grpc_ares_ev_driver>();
+  *ev_driver = static_cast<grpc_ares_ev_driver*>(
+      gpr_malloc(sizeof(grpc_ares_ev_driver)));
   ares_options opts;
   memset(&opts, 0, sizeof(opts));
   opts.flags |= ARES_FLAG_STAYOPEN;
   int status = ares_init_options(&(*ev_driver)->channel, &opts, ARES_OPT_FLAGS);
+  grpc_core::ConfigureAresChannelLocked(&(*ev_driver)->channel);
   gpr_log(GPR_DEBUG, "grpc_ares_ev_driver_create_locked");
   if (status != ARES_SUCCESS) {
     char* err_msg;
@@ -142,10 +144,6 @@ grpc_error* grpc_ares_ev_driver_create_locked(grpc_ares_ev_driver** ev_driver,
   (*ev_driver)->working = false;
   (*ev_driver)->shutting_down = false;
   (*ev_driver)->request = request;
-  (*ev_driver)->polled_fd_factory =
-      grpc_core::NewGrpcPolledFdFactory((*ev_driver)->combiner);
-  (*ev_driver)
-      ->polled_fd_factory->ConfigureAresChannelLocked((*ev_driver)->channel);
   return GRPC_ERROR_NONE;
 }
 
@@ -249,9 +247,8 @@ static void grpc_ares_notify_on_event_locked(grpc_ares_ev_driver* ev_driver) {
         // Create a new fd_node if sock[i] is not in the fd_node list.
         if (fdn == nullptr) {
           fdn = static_cast<fd_node*>(gpr_malloc(sizeof(fd_node)));
-          fdn->grpc_polled_fd =
-              ev_driver->polled_fd_factory->NewGrpcPolledFdLocked(
-                  socks[i], ev_driver->pollset_set, ev_driver->combiner);
+          fdn->grpc_polled_fd = grpc_core::NewGrpcPolledFdLocked(
+              socks[i], ev_driver->pollset_set);
           gpr_log(GPR_DEBUG, "new fd: %s", fdn->grpc_polled_fd->GetName());
           fdn->ev_driver = ev_driver;
           fdn->readable_registered = false;
@@ -317,4 +314,4 @@ void grpc_ares_ev_driver_start_locked(grpc_ares_ev_driver* ev_driver) {
   }
 }
 
-#endif /* GRPC_ARES == 1 && !defined(GRPC_UV) */
+#endif /* GRPC_ARES == 1 && defined(GRPC_POSIX_SOCKET_ARES_EV_DRIVER) */
