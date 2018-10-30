@@ -8,23 +8,36 @@
 
 import UIKit
 
-class CustomTabBar: UIViewController {
+protocol CustomTabBarDelegate: class {
+    func homeButtonTapped()
+    func profileButtonTapped()
+}
 
+class CustomTabBar: UIViewController {
+    
+    weak var delegate: CustomTabBarDelegate?
+
+    @IBOutlet weak var pageIndicator: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func homeTapped(_ sender: Any) {
+        delegate?.homeButtonTapped()
+        print("home tapped")
     }
-    */
-
+    
+    @IBAction func profileTapped(_ sender: Any) {
+        delegate?.profileButtonTapped()
+        print("profile tapped")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toPageController" {
+            let destinationVC = segue.destination as? MainPageView
+            self.delegate = destinationVC
+        }
+    }
 }

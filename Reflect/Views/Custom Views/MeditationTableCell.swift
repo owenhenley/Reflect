@@ -9,6 +9,12 @@
 import UIKit
 
 class MeditationTableCell: UITableViewCell {
+    
+        // MARK: - Outlets
+    
+    @IBOutlet weak var collectionName: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

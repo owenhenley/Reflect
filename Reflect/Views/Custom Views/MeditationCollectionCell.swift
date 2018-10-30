@@ -9,7 +9,14 @@
 import UIKit
 
 class MeditationCollectionCell: UICollectionViewCell {
-
+    
+        // MARK: - Outlets
+    
+    @IBOutlet weak var meditationImage: UIImageView!
+    @IBOutlet weak var meditationName: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

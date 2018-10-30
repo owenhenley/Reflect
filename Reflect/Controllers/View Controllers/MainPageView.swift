@@ -8,23 +8,88 @@
 
 import UIKit
 
-class MainPageView: UIPageViewController {
+class MainPageView: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    
+    var pageControl = UIPageControl()
+    lazy var pageViews: [UIViewController] = {
+        return [
+            self.newVC(viewController: "meditations"),
+            self.newVC(viewController: "profile")
+        ]}()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.dataSource = self
+        self.delegate = self
+        
+        if let firstViewController = pageViews.first {
+            setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func newVC(viewController: String) -> UIViewController {
+        return UIStoryboard(name: "PageViewContainer", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
-    */
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        
+        guard let pageIndex = pageViews.index(of: viewController) else { return nil }
+        
+        let previousIndex = pageIndex - 1
+        
+        guard previousIndex >= 0 else { return nil }
+        
+        return pageViews[previousIndex]
+    }
+    
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        
+        guard let pageIndex = pageViews.index(of: viewController) else { return nil }
+        
+        let nextIndex = pageIndex + 1
+        let viewSceneCount = pageViews.count
+        
+        guard viewSceneCount != nextIndex else { return nil }
+        guard viewSceneCount > nextIndex else { return nil }
+        
+        return pageViews[nextIndex]
+    }
+    
+}
 
+extension MainPageView: CustomTabBarDelegate {
+    func homeButtonTapped() {
+        toPreviousArticle()
+    }
+    
+    func profileButtonTapped() {
+        toNextArticle()
+    }
+}
+
+extension UIPageViewController {
+    
+    // Functions for clicking next and previous in the navbar, Updated for swift 4
+    @objc func toNextArticle(){
+        guard let currentViewController = self.viewControllers?.first else { return }
+        
+        guard let nextViewController = dataSource?.pageViewController( self, viewControllerAfter: currentViewController ) else { return }
+        
+        // Has to be set like this, since else the delgates for the buttons won't work
+        setViewControllers([nextViewController], direction: .forward, animated: true, completion: { completed in self.delegate?.pageViewController?(self, didFinishAnimating: true, previousViewControllers: [], transitionCompleted: completed) })
+    }
+    
+    @objc func toPreviousArticle(){
+        guard let currentViewController = self.viewControllers?.first else { return }
+        
+        guard let previousViewController = dataSource?.pageViewController( self, viewControllerBefore: currentViewController ) else { return }
+        
+        // Has to be set like this, since else the delgates for the buttons won't work
+        setViewControllers([previousViewController], direction: .reverse, animated: true, completion:{ completed in self.delegate?.pageViewController?(self, didFinishAnimating: true, previousViewControllers: [], transitionCompleted: completed) })
+    }
+    
 }
