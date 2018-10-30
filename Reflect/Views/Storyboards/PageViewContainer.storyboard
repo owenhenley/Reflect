@@ -25,16 +25,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlProfile" translatesAutoresizingMaskIntoConstraints="NO" id="mbi-Oj-vOs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girlProfile" translatesAutoresizingMaskIntoConstraints="NO" id="mbi-Oj-vOs" userLabel="ProfileImage">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="257.66666666666669"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bryndís" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-ff-4Gl">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bryndís" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-ff-4Gl" userLabel="Name">
                                 <rect key="frame" x="198" y="265.66666666666669" width="200" height="73.333333333333314"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="62"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Hei-QN-PyZ">
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="Hei-QN-PyZ">
                                 <rect key="frame" x="110" y="392" width="194" height="234.66666666666663"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7vm-iK-7e4">
@@ -73,30 +73,50 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0b4-E1-ATo">
-                                <rect key="frame" x="0.0" y="448" width="400" height="129"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0b4-E1-ATo">
+                                <rect key="frame" x="0.0" y="257.66666666666674" width="414" height="478.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up to see more meditations and your stats!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-Mn-SLV">
-                                        <rect key="frame" x="25" y="63" width="367" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WKt-2j-JTF">
+                                        <rect key="frame" x="82" y="77" width="250" height="87"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-Zu-TAs">
+                                                <rect key="frame" x="87" y="0.0" width="76" height="39"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Sign Up"/>
+                                                <connections>
+                                                    <segue destination="hez-dl-5h1" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="e9H-LD-6na"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to keep track of your mindfullness stats!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNZ-Mn-SLV">
+                                                <rect key="frame" x="34.666666666666671" y="39" width="181" height="48"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="eJ6-M6-6w4"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="0b4-E1-ATo" firstAttribute="leading" secondItem="k5y-Vr-WW0" secondAttribute="leading" id="0cH-5s-7iv"/>
                             <constraint firstAttribute="trailing" secondItem="wpT-ff-4Gl" secondAttribute="trailing" constant="16" id="50w-Hb-LAx"/>
                             <constraint firstItem="mbi-Oj-vOs" firstAttribute="leading" secondItem="k5y-Vr-WW0" secondAttribute="leading" id="7Uk-iy-kJz"/>
+                            <constraint firstItem="0b4-E1-ATo" firstAttribute="trailing" secondItem="k5y-Vr-WW0" secondAttribute="trailing" id="Ljo-1Y-U11"/>
                             <constraint firstItem="wpT-ff-4Gl" firstAttribute="top" secondItem="mbi-Oj-vOs" secondAttribute="bottom" constant="8" id="MJs-El-5Sy"/>
                             <constraint firstItem="Hei-QN-PyZ" firstAttribute="leading" secondItem="k5y-Vr-WW0" secondAttribute="leading" constant="110" id="Rjo-QH-6PV"/>
                             <constraint firstItem="mbi-Oj-vOs" firstAttribute="top" secondItem="Z28-FU-Yc9" secondAttribute="top" id="VIA-qC-xtY"/>
+                            <constraint firstItem="0b4-E1-ATo" firstAttribute="top" secondItem="mbi-Oj-vOs" secondAttribute="bottom" id="Z8L-Hf-6pF"/>
+                            <constraint firstItem="WKt-2j-JTF" firstAttribute="centerY" secondItem="k5y-Vr-WW0" secondAttribute="centerY" id="c9L-p6-ZQF"/>
                             <constraint firstItem="k5y-Vr-WW0" firstAttribute="trailing" secondItem="Hei-QN-PyZ" secondAttribute="trailing" constant="110" id="dU6-d6-deL"/>
+                            <constraint firstItem="0b4-E1-ATo" firstAttribute="bottom" secondItem="k5y-Vr-WW0" secondAttribute="bottom" id="dzy-VM-cSi"/>
                             <constraint firstItem="Hei-QN-PyZ" firstAttribute="top" secondItem="wpT-ff-4Gl" secondAttribute="bottom" constant="53" id="fOT-EH-9Lz"/>
+                            <constraint firstItem="WKt-2j-JTF" firstAttribute="centerX" secondItem="k5y-Vr-WW0" secondAttribute="centerX" id="hQB-Lr-xTV"/>
                             <constraint firstItem="mbi-Oj-vOs" firstAttribute="height" secondItem="Z28-FU-Yc9" secondAttribute="height" multiplier="0.35" id="lrD-X1-422"/>
                             <constraint firstAttribute="trailing" secondItem="mbi-Oj-vOs" secondAttribute="trailing" id="q5d-lg-ugX"/>
                         </constraints>
@@ -106,7 +126,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnn-yr-wTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="517"/>
+            <point key="canvasLocation" x="-98.550724637681171" y="516.84782608695662"/>
+        </scene>
+        <!--SignUpScreen-->
+        <scene sceneID="kfs-Hm-mjs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUpScreen" id="hez-dl-5h1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lIX-j8-8J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="355"/>
         </scene>
         <!--MeditationsVC-->
         <scene sceneID="qfm-XJ-MZk">

@@ -26,11 +26,13 @@ class CustomTabBar: UIViewController {
     
     @IBAction func homeTapped(_ sender: Any) {
         delegate?.homeButtonTapped()
+        #warning("Move Page Indicator")
         print("home tapped")
     }
     
     @IBAction func profileTapped(_ sender: Any) {
         delegate?.profileButtonTapped()
+        #warning("Move Page Indicator")
         print("profile tapped")
     }
     

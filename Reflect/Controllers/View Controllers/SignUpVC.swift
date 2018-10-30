@@ -10,9 +10,22 @@ import UIKit
 
 class SignUpVC: UIViewController {
 
+    @IBOutlet weak var blurView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        blurBackground()
+    }
+    
+    @IBAction func exitTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func blurBackground() {
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+        visualEffectView.frame = self.blurView.bounds
+        visualEffectView.translatesAutoresizingMaskIntoConstraints = true
+        self.blurView.addSubview(visualEffectView)
     }
 
 }

@@ -17,25 +17,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-LT-Ofz">
-                                <rect key="frame" x="20" y="252.5" width="335" height="162"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SuL-FY-jRy">
+                                <rect key="frame" x="0.0" y="0.0" width="954" height="1529"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nvW-LT-Ofz">
+                                <rect key="frame" x="20" y="240" width="335" height="187"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qX-t9-jFS">
+                                        <rect key="frame" x="305" y="0.0" width="30" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="14"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exitTapped:" destination="K6N-pL-5RX" eventType="touchUpInside" id="8GR-UC-zOd"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="IJd-lc-Vyl">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="124"/>
+                                        <rect key="frame" x="0.0" y="37" width="335" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="hZT-72-dIP">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="69"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="89"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YiO-Sy-pYc">
-                                                        <rect key="frame" x="33.5" y="0.0" width="268" height="30"/>
+                                                        <rect key="frame" x="33.5" y="0.0" width="268" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="Ehp-Fo-nfq"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NUX-uA-8N0">
-                                                        <rect key="frame" x="33.5" y="39" width="268" height="30"/>
+                                                        <rect key="frame" x="33.5" y="49" width="268" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="BLB-OA-XnR"/>
+                                                        </constraints>
                                                         <nil key="textColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                 </subviews>
@@ -45,38 +65,43 @@
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwT-Wa-89f">
-                                                <rect key="frame" x="146.5" y="94" width="42" height="30"/>
-                                                <state key="normal" title="Login!"/>
+                                                <rect key="frame" x="140.5" y="114" width="54" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Login!">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="hZT-72-dIP" firstAttribute="width" secondItem="IJd-lc-Vyl" secondAttribute="width" id="Qja-Rb-uWx"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ai4-wX-z0K">
-                                        <rect key="frame" x="0.0" y="132" width="34" height="30"/>
-                                        <state key="normal" title="Back"/>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="IJd-lc-Vyl" firstAttribute="top" secondItem="nvW-LT-Ofz" secondAttribute="top" id="EwM-hz-1RI"/>
                                     <constraint firstAttribute="trailing" secondItem="IJd-lc-Vyl" secondAttribute="trailing" id="JFa-oi-0pc"/>
                                     <constraint firstItem="IJd-lc-Vyl" firstAttribute="leading" secondItem="nvW-LT-Ofz" secondAttribute="leading" id="kz8-z6-9gp"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="nvW-LT-Ofz" firstAttribute="leading" secondItem="bTV-K8-6U8" secondAttribute="leading" constant="20" id="59R-38-YPd"/>
+                            <constraint firstAttribute="bottom" secondItem="SuL-FY-jRy" secondAttribute="bottom" constant="-862" id="BKT-27-dKd"/>
                             <constraint firstItem="nvW-LT-Ofz" firstAttribute="centerY" secondItem="NIU-J0-Ccu" secondAttribute="centerY" id="DYo-hS-6aw"/>
+                            <constraint firstAttribute="trailing" secondItem="SuL-FY-jRy" secondAttribute="trailing" constant="-579" id="L8c-Ay-Sky"/>
+                            <constraint firstItem="SuL-FY-jRy" firstAttribute="top" secondItem="NIU-J0-Ccu" secondAttribute="top" id="Z97-hi-70g"/>
                             <constraint firstItem="bTV-K8-6U8" firstAttribute="trailing" secondItem="nvW-LT-Ofz" secondAttribute="trailing" constant="20" id="vA6-nD-ubt"/>
+                            <constraint firstItem="SuL-FY-jRy" firstAttribute="leading" secondItem="NIU-J0-Ccu" secondAttribute="leading" id="yte-dK-vOc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bTV-K8-6U8"/>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="SuL-FY-jRy" id="n6j-GI-skQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DZX-RU-n9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="128"/>
+            <point key="canvasLocation" x="141.59999999999999" y="127.28635682158921"/>
         </scene>
     </scenes>
 </document>
