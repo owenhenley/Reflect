@@ -30,7 +30,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="9"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Lx-V1E">
-                                                        <rect key="frame" x="10" y="4" width="70" height="1"/>
+                                                        <rect key="frame" x="18" y="4" width="70" height="1"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="70" id="TaQ-ev-u0X"/>
@@ -41,15 +41,15 @@
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="cXg-Lx-V1E" firstAttribute="centerY" secondItem="Rcy-er-0ok" secondAttribute="centerY" id="3WY-th-wwg"/>
-                                                    <constraint firstItem="cXg-Lx-V1E" firstAttribute="leading" secondItem="Rcy-er-0ok" secondAttribute="leading" constant="10" id="GeD-h3-muD"/>
-                                                    <constraint firstAttribute="trailing" secondItem="cXg-Lx-V1E" secondAttribute="trailing" constant="200" id="y6d-sq-9Y1"/>
+                                                    <constraint firstItem="cXg-Lx-V1E" firstAttribute="leading" secondItem="Rcy-er-0ok" secondAttribute="leading" constant="18" id="GeD-h3-muD"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cXg-Lx-V1E" secondAttribute="trailing" constant="192" id="y6d-sq-9Y1"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="130" translatesAutoresizingMaskIntoConstraints="NO" id="xGo-QK-PbZ">
-                                                <rect key="frame" x="30.666666666666686" y="9" width="219" height="31"/>
+                                                <rect key="frame" x="30" y="9" width="220" height="31"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OB2-AQ-8ip">
-                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="31"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OB2-AQ-8ip">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="31"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <state key="normal" title="Home">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,7 +59,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X2-un-X3f">
-                                                        <rect key="frame" x="173" y="0.0" width="46" height="31"/>
+                                                        <rect key="frame" x="174" y="0.0" width="46" height="31"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                         <state key="normal" title="Profile">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,9 +69,13 @@
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="220" id="CCU-n2-WEg"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="xGo-QK-PbZ" firstAttribute="centerX" secondItem="850-AV-5Vr" secondAttribute="centerX" id="KoK-DO-GYc"/>
                                             <constraint firstItem="xGo-QK-PbZ" firstAttribute="top" secondItem="Rcy-er-0ok" secondAttribute="bottom" id="T1D-t9-ivM"/>
                                             <constraint firstItem="Rcy-er-0ok" firstAttribute="leading" secondItem="850-AV-5Vr" secondAttribute="leading" id="fvg-ck-3iw"/>
                                         </constraints>
