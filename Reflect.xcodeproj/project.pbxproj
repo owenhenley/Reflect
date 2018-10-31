@@ -16,6 +16,10 @@
 		3E172567216B018700DF13F4 /* PlayMeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172566216B018700DF13F4 /* PlayMeditationVC.swift */; };
 		3E172569216B019800DF13F4 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172568216B019800DF13F4 /* ProfileVC.swift */; };
 		3E17256F216B080700DF13F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E17256E216B080700DF13F4 /* GoogleService-Info.plist */; };
+		3E2D03AB2189149C00459252 /* practiceTests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D03AA2189149C00459252 /* practiceTests.storyboard */; };
+		3E2D03AD218914BD00459252 /* practiceTestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D03AC218914BD00459252 /* practiceTestsViewController.swift */; };
+		3E2D03AF2189173C00459252 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */; };
+		3E2D03B1218917C100459252 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D03B0218917C100459252 /* Constants.swift */; };
 		3E6E03FC2188BE1800123C1D /* PageViewContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E03FB2188BE1800123C1D /* PageViewContainer.storyboard */; };
 		3EA5CB1A21889793006AB0A6 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5CB1921889793006AB0A6 /* LoginScreen.storyboard */; };
 		3EC5E9F121879B1300237252 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC5E9F021879B1300237252 /* User.swift */; };
@@ -65,6 +69,10 @@
 		3E172566216B018700DF13F4 /* PlayMeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMeditationVC.swift; sourceTree = "<group>"; };
 		3E172568216B019800DF13F4 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3E17256E216B080700DF13F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3E2D03AA2189149C00459252 /* practiceTests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = practiceTests.storyboard; sourceTree = "<group>"; };
+		3E2D03AC218914BD00459252 /* practiceTestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practiceTestsViewController.swift; sourceTree = "<group>"; };
+		3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
+		3E2D03B0218917C100459252 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3E6E03FB2188BE1800123C1D /* PageViewContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PageViewContainer.storyboard; sourceTree = "<group>"; };
 		3EA5CB1921889793006AB0A6 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
 		3EC5E9F021879B1300237252 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -139,6 +147,8 @@
 		3E6E03FD2188F19600123C1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */,
+				3E2D03B0218917C100459252 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -258,6 +268,8 @@
 		3EE0E8D921489888005A798A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3E2D03AA2189149C00459252 /* practiceTests.storyboard */,
+				3E2D03AC218914BD00459252 /* practiceTestsViewController.swift */,
 				3EE0E8AC2148966C005A798A /* Assets.xcassets */,
 				3EE0E8A52148966A005A798A /* AppDelegate.swift */,
 				3EE0E8B12148966C005A798A /* Info.plist */,
@@ -412,6 +424,7 @@
 				3EE0E8AD2148966C005A798A /* Assets.xcassets in Resources */,
 				3E172560216AFF2200DF13F4 /* PlayMeditation.storyboard in Resources */,
 				3E6E03FC2188BE1800123C1D /* PageViewContainer.storyboard in Resources */,
+				3E2D03AB2189149C00459252 /* practiceTests.storyboard in Resources */,
 				3E17255E216AFED700DF13F4 /* CustomTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +477,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
@@ -480,6 +495,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
@@ -567,16 +584,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC5E9F521879B2A00237252 /* UserController.swift in Sources */,
+				3E2D03B1218917C100459252 /* Constants.swift in Sources */,
 				3EC5E9FE2187AC6100237252 /* MeditationCollectionCell.swift in Sources */,
 				3E172569216B019800DF13F4 /* ProfileVC.swift in Sources */,
 				3EC5E9F321879B1D00237252 /* Meditation.swift in Sources */,
 				3EC5EA032187C83500237252 /* CustomTabBar.swift in Sources */,
+				3E2D03AD218914BD00459252 /* practiceTestsViewController.swift in Sources */,
 				3E172563216B013B00DF13F4 /* SignUpVC.swift in Sources */,
 				3EC5E9FA2187AC3800237252 /* MeditationTableCell.swift in Sources */,
 				3EC5E9F121879B1300237252 /* User.swift in Sources */,
 				3EC5E9F721879B3800237252 /* MeditationController.swift in Sources */,
 				3EE0E8A62148966A005A798A /* AppDelegate.swift in Sources */,
 				3EC5EA072187C8F100237252 /* MeditationsVC.swift in Sources */,
+				3E2D03AF2189173C00459252 /* FirebaseStorageHelper.swift in Sources */,
 				3E172567216B018700DF13F4 /* PlayMeditationVC.swift in Sources */,
 				3E172565216B015100DF13F4 /* LoginVC.swift in Sources */,
 				3EC5EA052187C8A500237252 /* MainPageView.swift in Sources */,
