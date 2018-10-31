@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z9n-tx-0eh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z9n-tx-0eh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,7 +40,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="pL0-Ht-rtE">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="138"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFJ-Vn-bRA">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sFJ-Vn-bRA">
                                                         <rect key="frame" x="33.5" y="0.0" width="268" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="4HF-XE-SSc"/>
@@ -83,6 +83,9 @@
                                                         <state key="normal" title="Sign Up!">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="signUpTapped:" destination="z9n-tx-0eh" eventType="touchUpInside" id="Etj-Bu-3tn"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NlU-YH-bOh">
                                                         <rect key="frame" x="0.0" y="36" width="214.5" height="29"/>
@@ -133,6 +136,9 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="lh2-Nf-e4O" id="yeJ-1c-W2u"/>
+                        <outlet property="emailTF" destination="9XS-ZR-Ytv" id="Mfv-wn-pi1"/>
+                        <outlet property="nameTF" destination="sFJ-Vn-bRA" id="7uE-Eg-riv"/>
+                        <outlet property="passwordTF" destination="815-qZ-iaP" id="NqJ-JX-9zM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yas-8N-YGX" userLabel="First Responder" sceneMemberID="firstResponder"/>

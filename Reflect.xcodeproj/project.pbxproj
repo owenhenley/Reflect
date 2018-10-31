@@ -250,8 +250,8 @@
 				3EC5EA062187C8F100237252 /* MeditationsVC.swift */,
 				3E172568216B019800DF13F4 /* ProfileVC.swift */,
 				3E172566216B018700DF13F4 /* PlayMeditationVC.swift */,
-				3E172564216B015100DF13F4 /* LoginVC.swift */,
 				3E172562216B013B00DF13F4 /* SignUpVC.swift */,
+				3E172564216B015100DF13F4 /* LoginVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -381,6 +381,11 @@
 				TargetAttributes = {
 					3EE0E8A12148966A005A798A = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					3EE0E8B52148966C005A798A = {
 						CreatedOnToolsVersion = 10.0;

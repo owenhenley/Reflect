@@ -126,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnn-yr-wTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98.550724637681171" y="516.84782608695662"/>
+            <point key="canvasLocation" x="-219" y="517"/>
         </scene>
         <!--SignUpScreen-->
         <scene sceneID="kfs-Hm-mjs">
@@ -134,7 +134,7 @@
                 <viewControllerPlaceholder storyboardName="SignUpScreen" id="hez-dl-5h1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIX-j8-8J8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="355"/>
+            <point key="canvasLocation" x="451" y="452"/>
         </scene>
         <!--MeditationsVC-->
         <scene sceneID="qfm-XJ-MZk">
@@ -148,7 +148,7 @@
                                 <rect key="frame" x="0.0" y="180" width="414" height="556"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeTableCell" rowHeight="159" id="d6g-9f-VSK" customClass="MeditationTableCell" customModule="Reflect" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="meditationTableCell" rowHeight="159" id="d6g-9f-VSK" customClass="MeditationTableCell" customModule="Reflect" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d6g-9f-VSK" id="5G5-yu-SIB">
@@ -238,7 +238,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation Of The Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taH-t9-5eu">
-                                                <rect key="frame" x="111" y="148" width="192" height="24"/>
+                                                <rect key="frame" x="111.00000000000001" y="148" width="192.33333333333337" height="24"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -279,11 +279,41 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="egt-pl-bVV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DXc-P8-bwn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="PDm-Ae-irh" kind="show" identifier="playMeditation" id="hJS-Oh-jC9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctj-YQ-FUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1001" y="517"/>
+            <point key="canvasLocation" x="-1043" y="517"/>
+        </scene>
+        <!--PlayMeditation-->
+        <scene sceneID="A3m-hi-yLI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayMeditation" id="PDm-Ae-irh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dI-Vm-VqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1105" y="937"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DBU-Qx-1oA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lA0-Nh-qEB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F6k-2X-7jQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kpz-5h-ekR" kind="relationship" relationship="rootViewController" id="nQ2-Oc-TYP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUm-Eh-Fhh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1951" y="517"/>
         </scene>
     </scenes>
     <resources>
