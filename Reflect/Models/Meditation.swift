@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import Firebase
+
+class Meditation {
+    
+    var name: String
+    var length: TimeInterval
+    var downloadURL: String
+    
+    init(name: String, length: TimeInterval, downloadURL: String) {
+        self.name = name
+        self.length = length
+        self.downloadURL = downloadURL
+    }
+}
