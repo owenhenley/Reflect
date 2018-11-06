@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHR-kj-BR0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SHR-kj-BR0">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Storyboard Reference-->
+        <scene sceneID="fV9-Jc-sUL">
+            <objects>
+                <viewControllerPlaceholder id="1Cq-GV-8qJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PQd-26-aB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1430" y="-421"/>
+        </scene>
         <!--Main Page View-->
         <scene sceneID="xjy-uN-gd3">
             <objects>
-                <pageViewController storyboardIdentifier="pageViewContainer" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SHR-kj-BR0" customClass="MainPageView" customModule="Reflect" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="pageViewContainer" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="SHR-kj-BR0" customClass="MainPageView" customModule="Reflect" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="1Cq-GV-8qJ" kind="custom" identifier="toCustomTabBar" id="KEU-vq-g22"/>
+                    </connections>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZg-Gf-xJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-588" y="-189"/>
@@ -145,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jzd-jt-A36">
-                                <rect key="frame" x="0.0" y="180" width="414" height="556"/>
+                                <rect key="frame" x="0.0" y="180" width="414" height="550"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="meditationTableCell" rowHeight="159" id="d6g-9f-VSK" customClass="MeditationTableCell" customModule="Reflect" customModuleProvider="target">
@@ -156,31 +168,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*meditation collection*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJl-Hw-aNs">
-                                                    <rect key="frame" x="15" y="11" width="229" height="29"/>
+                                                    <rect key="frame" x="15" y="11" width="384" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UIJ-Aq-RuD">
-                                                    <rect key="frame" x="15" y="48" width="360" height="91"/>
+                                                    <rect key="frame" x="15" y="48" width="399" height="111"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IlH-Ub-1v6">
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IlH-Ub-1v6">
                                                         <size key="itemSize" width="137" height="97"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="homeCollectionCell" id="bSk-TZ-XL5" customClass="MeditationCollectionCell" customModule="Reflect" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="137" height="97"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="meditationCollectionCell" id="bSk-TZ-XL5" customClass="MeditationCollectionCell" customModule="Reflect" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="7" width="137" height="97"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="137" height="97"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus-position-1" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-gj-7EF">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation2" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-gj-7EF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="137" height="69"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*meditation name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYC-nF-rWe">
@@ -201,6 +213,7 @@
                                                             <connections>
                                                                 <outlet property="meditationImage" destination="tXF-gj-7EF" id="Sh7-ya-JkY"/>
                                                                 <outlet property="meditationName" destination="cYC-nF-rWe" id="7si-xG-t6I"/>
+                                                                <segue destination="PDm-Ae-irh" kind="show" id="pfY-Sz-bls"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -219,51 +232,73 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zX6-UP-SgO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                        <rect key="frame" x="16" y="50" width="382" height="112"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKQ-q0-bYT">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
-                                            </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus" translatesAutoresizingMaskIntoConstraints="NO" id="npg-iF-Q1f">
-                                                <rect key="frame" x="98.666666666666686" y="37" width="217" height="106"/>
-                                                <color key="backgroundColor" red="0.200227499" green="0.30116909739999997" blue="0.35962730650000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="217" id="OFW-9q-eiK"/>
-                                                    <constraint firstAttribute="height" constant="106" id="X20-09-szU"/>
-                                                </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
-                                                        <integer key="value" value="6"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation Of The Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taH-t9-5eu">
-                                                <rect key="frame" x="111.00000000000001" y="148" width="192.33333333333337" height="24"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Cco-RA-8oz">
+                                                <rect key="frame" x="16" y="16" width="350" height="80"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotus2" translatesAutoresizingMaskIntoConstraints="NO" id="npg-iF-Q1f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="80" id="OFW-9q-eiK"/>
+                                                            <constraint firstAttribute="height" constant="80" id="X20-09-szU"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                                                <integer key="value" value="6"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sAz-9t-cga">
+                                                        <rect key="frame" x="105" y="0.0" width="245" height="80"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation Of The Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taH-t9-5eu">
+                                                                <rect key="frame" x="26.333333333333343" y="0.0" width="192.33333333333334" height="40"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="3mX-QA-i6t">
+                                                                <rect key="frame" x="102.66666666666666" y="40" width="40" height="40"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="3mX-QA-i6t" secondAttribute="height" multiplier="1:1" id="sE1-FI-mIt"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="0.1825437546" green="0.3663247228" blue="0.48753470180000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="npg-iF-Q1f" firstAttribute="centerX" secondItem="zX6-UP-SgO" secondAttribute="centerX" id="Cjq-1b-ZId"/>
-                                            <constraint firstItem="sKQ-q0-bYT" firstAttribute="top" secondItem="zX6-UP-SgO" secondAttribute="top" id="Iby-J3-Upo"/>
-                                            <constraint firstAttribute="bottom" secondItem="sKQ-q0-bYT" secondAttribute="bottom" id="OcO-55-dZu"/>
-                                            <constraint firstItem="taH-t9-5eu" firstAttribute="centerX" secondItem="zX6-UP-SgO" secondAttribute="centerX" id="YAH-31-cyf"/>
-                                            <constraint firstItem="sKQ-q0-bYT" firstAttribute="leading" secondItem="zX6-UP-SgO" secondAttribute="leading" id="dHY-5o-wR5"/>
-                                            <constraint firstItem="npg-iF-Q1f" firstAttribute="top" secondItem="zX6-UP-SgO" secondAttribute="top" constant="37" id="h7D-bM-CEJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="taH-t9-5eu" secondAttribute="bottom" constant="8" id="s2o-0E-ehl"/>
-                                            <constraint firstAttribute="trailing" secondItem="sKQ-q0-bYT" secondAttribute="trailing" id="zs1-5A-4aL"/>
+                                            <constraint firstAttribute="trailing" secondItem="Cco-RA-8oz" secondAttribute="trailing" constant="16" id="dhd-fO-diS"/>
+                                            <constraint firstItem="Cco-RA-8oz" firstAttribute="leading" secondItem="zX6-UP-SgO" secondAttribute="leading" constant="16" id="kot-Ua-Oms"/>
+                                            <constraint firstItem="Cco-RA-8oz" firstAttribute="top" secondItem="zX6-UP-SgO" secondAttribute="top" constant="16" id="oPJ-bv-N1t"/>
+                                            <constraint firstAttribute="bottom" secondItem="Cco-RA-8oz" secondAttribute="bottom" constant="16" id="pic-bo-xHC"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKQ-q0-bYT">
+                                        <rect key="frame" x="16" y="50" width="382" height="112"/>
+                                        <connections>
+                                            <segue destination="PDm-Ae-irh" kind="show" id="Olq-f9-i2u"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="zX6-UP-SgO" firstAttribute="top" secondItem="E5w-je-UZ4" secondAttribute="top" id="02W-mf-7S6"/>
-                                    <constraint firstAttribute="trailing" secondItem="zX6-UP-SgO" secondAttribute="trailing" id="0AN-9F-SBd"/>
+                                    <constraint firstItem="sKQ-q0-bYT" firstAttribute="centerX" secondItem="zX6-UP-SgO" secondAttribute="centerX" id="Cy0-Mp-Rh3"/>
                                     <constraint firstAttribute="height" constant="180" id="FfL-Sc-WoV"/>
-                                    <constraint firstItem="zX6-UP-SgO" firstAttribute="leading" secondItem="E5w-je-UZ4" secondAttribute="leading" id="cgG-kZ-nZj"/>
-                                    <constraint firstAttribute="bottom" secondItem="zX6-UP-SgO" secondAttribute="bottom" id="rL2-jI-eTt"/>
+                                    <constraint firstItem="sKQ-q0-bYT" firstAttribute="height" secondItem="zX6-UP-SgO" secondAttribute="height" id="G0l-IB-3Bd"/>
+                                    <constraint firstItem="zX6-UP-SgO" firstAttribute="top" secondItem="E5w-je-UZ4" secondAttribute="top" constant="50" id="LPp-lC-MmF"/>
+                                    <constraint firstAttribute="trailing" secondItem="zX6-UP-SgO" secondAttribute="trailing" constant="16" id="MrB-Lw-gZm"/>
+                                    <constraint firstItem="zX6-UP-SgO" firstAttribute="leading" secondItem="E5w-je-UZ4" secondAttribute="leading" constant="16" id="gPg-BT-N6A"/>
+                                    <constraint firstItem="sKQ-q0-bYT" firstAttribute="width" secondItem="zX6-UP-SgO" secondAttribute="width" id="gVt-20-4jI"/>
+                                    <constraint firstItem="sKQ-q0-bYT" firstAttribute="centerY" secondItem="zX6-UP-SgO" secondAttribute="centerY" id="w9P-7J-G0X"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -272,22 +307,22 @@
                             <constraint firstItem="Jzd-jt-A36" firstAttribute="leading" secondItem="egt-pl-bVV" secondAttribute="leading" id="4cC-P5-776"/>
                             <constraint firstItem="Jzd-jt-A36" firstAttribute="trailing" secondItem="egt-pl-bVV" secondAttribute="trailing" id="8zw-Hi-oIC"/>
                             <constraint firstItem="E5w-je-UZ4" firstAttribute="trailing" secondItem="egt-pl-bVV" secondAttribute="trailing" id="9Fc-i1-AGA"/>
+                            <constraint firstItem="Jzd-jt-A36" firstAttribute="top" secondItem="E5w-je-UZ4" secondAttribute="bottom" id="AaW-jk-Kkx"/>
                             <constraint firstItem="E5w-je-UZ4" firstAttribute="top" secondItem="p72-Na-Sno" secondAttribute="top" id="QMo-ze-aVm"/>
-                            <constraint firstItem="Jzd-jt-A36" firstAttribute="top" secondItem="E5w-je-UZ4" secondAttribute="bottom" id="Rra-D2-oi4"/>
                             <constraint firstItem="E5w-je-UZ4" firstAttribute="leading" secondItem="egt-pl-bVV" secondAttribute="leading" id="SiW-sX-rPu"/>
-                            <constraint firstAttribute="bottom" secondItem="Jzd-jt-A36" secondAttribute="bottom" id="dqd-wk-6Ji"/>
+                            <constraint firstAttribute="bottom" secondItem="Jzd-jt-A36" secondAttribute="bottom" constant="6" id="dqd-wk-6Ji"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="egt-pl-bVV"/>
                     </view>
                     <navigationItem key="navigationItem" id="DXc-P8-bwn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="PDm-Ae-irh" kind="show" identifier="playMeditation" id="hJS-Oh-jC9"/>
+                        <outlet property="tableView" destination="Jzd-jt-A36" id="ncc-3N-va9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctj-YQ-FUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1043" y="517"/>
+            <point key="canvasLocation" x="-1043.4782608695652" y="516.84782608695662"/>
         </scene>
         <!--PlayMeditation-->
         <scene sceneID="A3m-hi-yLI">
@@ -295,7 +330,7 @@
                 <viewControllerPlaceholder storyboardName="PlayMeditation" id="PDm-Ae-irh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dI-Vm-VqG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1105" y="937"/>
+            <point key="canvasLocation" x="-1043" y="973"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DBU-Qx-1oA">
@@ -315,10 +350,21 @@
             </objects>
             <point key="canvasLocation" x="-1951" y="517"/>
         </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="cfh-HP-reP">
+            <objects>
+                <viewControllerPlaceholder id="upm-5M-czZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9MM-MB-6Fs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="girlProfile" width="2491" height="1805"/>
-        <image name="lotus" width="396.3870849609375" height="396.3870849609375"/>
-        <image name="lotus-position-1" width="396.3870849609375" height="396.3870849609375"/>
+        <image name="lotus2" width="483" height="521"/>
+        <image name="meditation2" width="418" height="483"/>
+        <image name="play" width="409.60000610351562" height="409.60000610351562"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Olq-f9-i2u"/>
+    </inferredMetricsTieBreakers>
 </document>

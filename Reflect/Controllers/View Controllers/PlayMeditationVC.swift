@@ -35,6 +35,9 @@ class PlayMeditationVC: UIViewController {
     
     
         // MARK: - Actions
+    @IBAction func backTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func playTapped(_ sender: Any) {
         if audioPlaying == false {
