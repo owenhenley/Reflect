@@ -6,34 +6,30 @@
 //  Copyright © 2018 Owen Henley. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 
-class MeditationController {
+struct MeditationController {
+    
+    static let shared = MeditationController()
     
         // MARK: - Properties
     
-    var meditations = [Meditation]()
+    var meditations = [String]()
     
     
         // MARK: - Methods
     
-    static func getCategory(completion: @escaping (Bool) -> Void) {
+    func getCategoryMeditations(completion: @escaping (Bool) -> Void) {
         
     }
     
-    static func getCategoryMeditations(completion: @escaping (Bool) -> Void) {
+    func getMeditaionURL(completion: @escaping (Bool) -> Void) {
         
     }
     
-    static func getMeditaionURL(completion: @escaping (Bool) -> Void) {
+    func streamAudio(completion: @escaping (Bool) -> Void) {
         
     }
-    
-    static func streamAudio(completion: @escaping (Bool) -> Void) {
-        
-    }
-    
-    
     
 }

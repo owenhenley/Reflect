@@ -15,24 +15,25 @@ class MeditationTableCell: UITableViewCell, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collectionName: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+   
+    //MARK: UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "meditationCollectionCell", for: indexPath) as? MeditationCollectionCell
+        
+        return cell ?? UICollectionViewCell()
     }
     
 }
