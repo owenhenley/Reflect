@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iQB-Ht-1bX">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Tab Bar-->
+        <scene sceneID="iUZ-RB-yYg">
+            <objects>
+                <viewController storyboardIdentifier="customTabBar" id="iQB-Ht-1bX" customClass="CustomTabBar" customModule="Reflect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JPR-Ud-sB4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SkyGradient" translatesAutoresizingMaskIntoConstraints="NO" id="sZ2-oa-NQ8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6B-NJ-xOC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <connections>
+                                    <segue destination="TN3-03-K5s" kind="embed" identifier="toPageController" id="Q9K-ha-pgN"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-Hx-wxK">
+                                <rect key="frame" x="0.0" y="677" width="414" height="59"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wuV-b8-ZOV" userLabel="blurView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="r57-Dz-0Zw">
+                                        <rect key="frame" x="57" y="9.6666666666666288" width="300" height="40"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vux-Vf-EPA">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXg-Lx-V1E">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="2"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="TaQ-ev-u0X"/>
+                                                            <constraint firstAttribute="height" constant="2" id="zBV-hl-Org"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OB2-AQ-8ip">
+                                                        <rect key="frame" x="33" y="2" width="54" height="38"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <state key="normal" title="Home">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="homeTapped:" destination="iQB-Ht-1bX" eventType="touchUpInside" id="Rkq-2O-6uV"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="eyO-G7-N59">
+                                                <rect key="frame" x="180" y="0.0" width="120" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpW-Lx-e7c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="2"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="VqR-mW-DnE"/>
+                                                            <constraint firstAttribute="height" constant="2" id="YLa-YC-LiC"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="1"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6X2-un-X3f">
+                                                        <rect key="frame" x="0.0" y="2" width="120" height="38"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <state key="normal" title="Profile">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="profileTapped:" destination="iQB-Ht-1bX" eventType="touchUpInside" id="g16-Nf-wf8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="Bfe-Lg-nPJ"/>
+                                    <constraint firstItem="wuV-b8-ZOV" firstAttribute="centerY" secondItem="2DC-Hx-wxK" secondAttribute="centerY" id="F0E-PL-WXB"/>
+                                    <constraint firstItem="wuV-b8-ZOV" firstAttribute="centerX" secondItem="2DC-Hx-wxK" secondAttribute="centerX" id="RcS-W0-EAG"/>
+                                    <constraint firstAttribute="trailing" secondItem="r57-Dz-0Zw" secondAttribute="trailing" constant="57" id="ZqT-pw-PNQ"/>
+                                    <constraint firstItem="r57-Dz-0Zw" firstAttribute="leading" secondItem="2DC-Hx-wxK" secondAttribute="leading" constant="57" id="cRF-ph-QgU"/>
+                                    <constraint firstItem="r57-Dz-0Zw" firstAttribute="centerY" secondItem="2DC-Hx-wxK" secondAttribute="centerY" id="dfU-RR-fBj"/>
+                                    <constraint firstItem="r57-Dz-0Zw" firstAttribute="centerX" secondItem="2DC-Hx-wxK" secondAttribute="centerX" id="gGw-Nr-fWu"/>
+                                    <constraint firstItem="wuV-b8-ZOV" firstAttribute="width" secondItem="2DC-Hx-wxK" secondAttribute="width" id="hw8-ca-SNC"/>
+                                    <constraint firstItem="wuV-b8-ZOV" firstAttribute="height" secondItem="2DC-Hx-wxK" secondAttribute="height" id="jNn-Y9-pt5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sZ2-oa-NQ8" firstAttribute="top" secondItem="JPR-Ud-sB4" secondAttribute="top" id="FR9-bc-KqB"/>
+                            <constraint firstAttribute="bottom" secondItem="sZ2-oa-NQ8" secondAttribute="bottom" id="G5f-Om-A3Q"/>
+                            <constraint firstItem="2DC-Hx-wxK" firstAttribute="trailing" secondItem="d5Z-py-DTj" secondAttribute="trailing" id="Hyh-rz-WgJ"/>
+                            <constraint firstItem="d5Z-py-DTj" firstAttribute="trailing" secondItem="sZ2-oa-NQ8" secondAttribute="trailing" id="RLa-9B-ixv"/>
+                            <constraint firstAttribute="bottom" secondItem="2DC-Hx-wxK" secondAttribute="bottom" id="b6A-LU-Wk2"/>
+                            <constraint firstItem="J6B-NJ-xOC" firstAttribute="trailing" secondItem="d5Z-py-DTj" secondAttribute="trailing" id="qZ6-Pe-yL1"/>
+                            <constraint firstItem="J6B-NJ-xOC" firstAttribute="top" secondItem="JPR-Ud-sB4" secondAttribute="top" id="ugn-dM-itS"/>
+                            <constraint firstItem="sZ2-oa-NQ8" firstAttribute="leading" secondItem="JPR-Ud-sB4" secondAttribute="leading" id="x0E-kn-CZ3"/>
+                            <constraint firstItem="J6B-NJ-xOC" firstAttribute="bottom" secondItem="d5Z-py-DTj" secondAttribute="bottom" id="xex-dR-Pw4"/>
+                            <constraint firstItem="J6B-NJ-xOC" firstAttribute="leading" secondItem="d5Z-py-DTj" secondAttribute="leading" id="yfj-ZM-ifd"/>
+                            <constraint firstItem="2DC-Hx-wxK" firstAttribute="leading" secondItem="d5Z-py-DTj" secondAttribute="leading" id="znp-zy-vUn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d5Z-py-DTj"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="wuV-b8-ZOV" id="xQr-eh-C2L"/>
+                        <outlet property="homeButton" destination="OB2-AQ-8ip" id="v1A-h9-TXC"/>
+                        <outlet property="homePageIndicator" destination="cXg-Lx-V1E" id="1VI-Fw-aUH"/>
+                        <outlet property="profileButton" destination="6X2-un-X3f" id="ac8-1p-kHG"/>
+                        <outlet property="profilePageIndicator" destination="LpW-Lx-e7c" id="czP-9a-0W9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGX-e1-74r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1402.8985507246377" y="-189.94565217391306"/>
+        </scene>
+        <!--PageViewContainer-->
+        <scene sceneID="fw0-rr-jT5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PageViewContainer" id="TN3-03-K5s" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sjI-rH-HT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="-190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SkyGradient" width="2700" height="1800"/>
+    </resources>
+</document>

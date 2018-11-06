@@ -18,8 +18,6 @@
 
 #include <grpc/support/port_platform.h>
 
-#include "src/core/tsi/grpc_shadow_boringssl.h"
-
 #include "src/core/tsi/ssl_transport_security.h"
 
 #include <limits.h>
@@ -42,12 +40,12 @@
 #include <grpc/support/thd_id.h>
 
 extern "C" {
-#include <openssl_grpc/bio.h>
-#include <openssl_grpc/crypto.h> /* For OPENSSL_free */
-#include <openssl_grpc/err.h>
-#include <openssl_grpc/ssl.h>
-#include <openssl_grpc/x509.h>
-#include <openssl_grpc/x509v3.h>
+#include <openssl/bio.h>
+#include <openssl/crypto.h> /* For OPENSSL_free */
+#include <openssl/err.h>
+#include <openssl/ssl.h>
+#include <openssl/x509.h>
+#include <openssl/x509v3.h>
 }
 
 #include "src/core/lib/gpr/useful.h"
@@ -218,7 +216,7 @@ static void ssl_log_where_info(const SSL* ssl, int where, int flag,
 /* Used for debugging. TODO(jboeuf): Remove when code is mature enough. */
 static void ssl_info_callback(const SSL* ssl, int where, int ret) {
   if (ret == 0) {
-    gpr_log(GPR_ERROR, "ssl_info_callback: error occurred.\n");
+    gpr_log(GPR_ERROR, "ssl_info_callback: error occured.\n");
     return;
   }
 
@@ -1051,9 +1049,9 @@ static tsi_result ssl_handshaker_result_extract_peer(
   }
 
   const char* session_reused = SSL_session_reused(impl->ssl) ? "true" : "false";
-  result = tsi_construct_string_peer_property_from_cstring(
+  result = tsi_construct_string_peer_property(
       TSI_SSL_SESSION_REUSED_PEER_PROPERTY, session_reused,
-      &peer->properties[peer->property_count]);
+      strlen(session_reused) + 1, &peer->properties[peer->property_count]);
   if (result != TSI_OK) return result;
   peer->property_count++;
 

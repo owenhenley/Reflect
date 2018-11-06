@@ -33,9 +33,9 @@
 #include "src/core/lib/slice/b64.h"
 
 extern "C" {
-#include <openssl_grpc/bio.h>
-#include <openssl_grpc/evp.h>
-#include <openssl_grpc/pem.h>
+#include <openssl/bio.h>
+#include <openssl/evp.h>
+#include <openssl/pem.h>
 }
 
 /* --- Constants. --- */

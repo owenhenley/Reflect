@@ -11,6 +11,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'Firebase/Firestore'
+pod 'FirebaseUI/Storage'
+pod 'SVProgressHUD'
 
   target 'ReflectTests' do
     inherit! :search_paths

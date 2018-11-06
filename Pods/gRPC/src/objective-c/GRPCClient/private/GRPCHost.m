@@ -34,8 +34,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-extern const char *kCFStreamVarName;
-
 static NSMutableDictionary *kHostCache;
 
 @implementation GRPCHost {
@@ -51,11 +49,9 @@ static NSMutableDictionary *kHostCache;
   if (_channelCreds != nil) {
     grpc_channel_credentials_release(_channelCreds);
   }
-  // Connectivity monitor is not required for CFStream
-  char *enableCFStream = getenv(kCFStreamVarName);
-  if (enableCFStream == nil || enableCFStream[0] != '1') {
-    [GRPCConnectivityMonitor unregisterObserver:self];
-  }
+#ifndef GRPC_CFSTREAM
+  [GRPCConnectivityMonitor unregisterObserver:self];
+#endif
 }
 
 // Default initializer.
@@ -91,12 +87,9 @@ static NSMutableDictionary *kHostCache;
       _compressAlgorithm = GRPC_COMPRESS_NONE;
       _retryEnabled = YES;
     }
-
-    // Connectivity monitor is not required for CFStream
-    char *enableCFStream = getenv(kCFStreamVarName);
-    if (enableCFStream == nil || enableCFStream[0] != '1') {
-      [GRPCConnectivityMonitor registerObserver:self selector:@selector(connectivityChange:)];
-    }
+#ifndef GRPC_CFSTREAM
+    [GRPCConnectivityMonitor registerObserver:self selector:@selector(connectivityChange:)];
+#endif
   }
   return self;
 }

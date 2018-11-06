@@ -1,41 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPw-Vx-TKR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hPw-Vx-TKR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Play MeditationVC-->
         <scene sceneID="Taj-lw-umh">
             <objects>
-                <viewController id="hPw-Vx-TKR" sceneMemberID="viewController">
+                <viewController id="hPw-Vx-TKR" customClass="PlayMeditationVC" customModule="Reflect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TXU-2X-J0y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dre-9t-8mT">
-                                <rect key="frame" x="67" y="213" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SkyGradient" translatesAutoresizingMaskIntoConstraints="NO" id="xjd-d6-KIa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meditation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLM-bw-6Sc">
-                                <rect key="frame" x="122" y="65" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_wheel" translatesAutoresizingMaskIntoConstraints="NO" id="m6o-vF-yvP">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YaV-I1-pH2"/>
+                                    <constraint firstAttribute="width" constant="200" id="srN-ls-JvG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaV-ky-7vh">
+                                <rect key="frame" x="97.5" y="243.5" width="180" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="EWS-Ak-rGe"/>
+                                    <constraint firstAttribute="width" constant="180" id="XqB-m0-waj"/>
+                                </constraints>
+                                <state key="normal" image="play-button-3"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="hPw-Vx-TKR" eventType="touchUpInside" id="95J-HC-CKj"/>
+                                    <action selector="sliderMoved:" destination="hPw-Vx-TKR" eventType="touchUpInside" id="Lk5-Iq-q9d"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dMy-f9-MuK">
+                                <rect key="frame" x="3" y="509" width="369" height="31"/>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" red="0.18254375457763672" green="0.36632472276687622" blue="0.48753470182418823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meditation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLM-bw-6Sc">
+                                <rect key="frame" x="125.5" y="173.5" width="124" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAF-47-CW9">
+                                <rect key="frame" x="16" y="32" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ER0-uD-JJF"/>
+                                    <constraint firstAttribute="width" constant="30" id="rqc-p6-pDv"/>
+                                </constraints>
+                                <state key="normal" image="backArrow"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="hPw-Vx-TKR" eventType="touchUpInside" id="FaR-JQ-301"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fAF-47-CW9" firstAttribute="top" secondItem="TXU-2X-J0y" secondAttribute="top" constant="32" id="0JI-K3-UD7"/>
+                            <constraint firstAttribute="bottom" secondItem="xjd-d6-KIa" secondAttribute="bottom" id="5HX-DV-gcd"/>
+                            <constraint firstItem="CLM-bw-6Sc" firstAttribute="centerX" secondItem="TXU-2X-J0y" secondAttribute="centerX" id="BlO-HU-o70"/>
+                            <constraint firstItem="m6o-vF-yvP" firstAttribute="centerY" secondItem="TXU-2X-J0y" secondAttribute="centerY" id="GvV-sY-PIN"/>
+                            <constraint firstItem="fAF-47-CW9" firstAttribute="leading" secondItem="TXU-2X-J0y" secondAttribute="leading" constant="16" id="Hda-uR-LKL"/>
+                            <constraint firstItem="xjd-d6-KIa" firstAttribute="leading" secondItem="TXU-2X-J0y" secondAttribute="leading" id="NNV-KL-mDg"/>
+                            <constraint firstItem="dMy-f9-MuK" firstAttribute="leading" secondItem="Syp-0N-rUv" secondAttribute="leading" constant="5" id="Sxh-co-CWo"/>
+                            <constraint firstAttribute="trailing" secondItem="dMy-f9-MuK" secondAttribute="trailing" constant="5" id="WFz-Rh-W5V"/>
+                            <constraint firstItem="m6o-vF-yvP" firstAttribute="centerX" secondItem="TXU-2X-J0y" secondAttribute="centerX" id="Wyf-r6-1hj"/>
+                            <constraint firstItem="xjd-d6-KIa" firstAttribute="top" secondItem="TXU-2X-J0y" secondAttribute="top" id="eJR-hM-8hq"/>
+                            <constraint firstAttribute="trailing" secondItem="xjd-d6-KIa" secondAttribute="trailing" id="uxv-PE-p2h"/>
+                            <constraint firstItem="dMy-f9-MuK" firstAttribute="top" secondItem="XaV-ky-7vh" secondAttribute="bottom" constant="85.5" id="v7y-he-RDZ"/>
+                            <constraint firstItem="XaV-ky-7vh" firstAttribute="top" secondItem="CLM-bw-6Sc" secondAttribute="bottom" constant="50" id="wdc-np-AQD"/>
+                            <constraint firstItem="XaV-ky-7vh" firstAttribute="centerX" secondItem="TXU-2X-J0y" secondAttribute="centerX" id="xyB-Yu-cZd"/>
+                            <constraint firstItem="XaV-ky-7vh" firstAttribute="centerY" secondItem="TXU-2X-J0y" secondAttribute="centerY" id="zfy-Ly-BoM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Syp-0N-rUv"/>
                     </view>
+                    <connections>
+                        <outlet property="meditationNameLabel" destination="CLM-bw-6Sc" id="TU6-h5-bGZ"/>
+                        <outlet property="playButton" destination="XaV-ky-7vh" id="p1Y-Ia-fkj"/>
+                        <outlet property="playbackSlider" destination="dMy-f9-MuK" id="8f0-82-G2w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMV-EJ-TC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-73" y="-37"/>
+            <point key="canvasLocation" x="-74.400000000000006" y="-37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SkyGradient" width="2700" height="1800"/>
+        <image name="backArrow" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="play-button-3" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="play_wheel" width="561" height="564"/>
+    </resources>
 </document>
