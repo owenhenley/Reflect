@@ -10,15 +10,15 @@ import UIKit
 
 class Meditation {
     
-    var name: String
-    var length: TimeInterval
-    var icon: UIImage!
-    var downloadURL: String
+    var name        : String
+    var length      : TimeInterval
+    var icon        : UIImage!
+    var downloadURL : String
     
     init(name: String, length: TimeInterval, icon: UIImage!, downloadURL: String) {
-        self.name = name
-        self.length = length
-        self.icon = icon
+        self.name        = name
+        self.length      = length
+        self.icon        = icon
         self.downloadURL = downloadURL
     }
 }
