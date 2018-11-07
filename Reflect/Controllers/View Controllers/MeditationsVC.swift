@@ -20,8 +20,7 @@ class MeditationsVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     
-    //MARK: UITableViewDataSource
-    
+        //MARK: UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180
     }
@@ -32,10 +31,13 @@ class MeditationsVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "meditationTableCell", for: indexPath) as? MeditationTableCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "meditationTableCell", for: indexPath) as? MeditationTableCell else { return UITableViewCell() }
 
-        cell?.collectionName.text = MeditationCategory.categories[indexPath.row].name
+        cell.collectionName.text = MeditationCategory.categories[indexPath.row].name
         
-        return cell ?? UITableViewCell()
+        // maybe remove when pull meditations
+        cell.myImage = MeditationCategory.categories[indexPath.row].icon
+        
+        return cell
     }
 }

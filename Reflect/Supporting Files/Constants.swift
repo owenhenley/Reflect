@@ -26,9 +26,9 @@ let EMAIL             = "email"
 
 
 // Meditation
-let LENGTH          = "length"
-let DL_URL          = "downloadURL"
-let MEDITATION_NAME = "name"
+let LENGTH            = "length"
+let DL_URL            = "downloadURL"
+let MEDITATION_NAME   = "name"
 
 
 // Meditations

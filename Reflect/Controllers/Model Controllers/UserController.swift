@@ -11,6 +11,8 @@ import Firebase
 
 class UserController {
     
+    static let shared = UserController()
+    
     var user: User?
     
     static func signUpUser(with email: String, password: String, and name: String, completion: @escaping (Bool) -> Void) {
@@ -45,7 +47,7 @@ class UserController {
     }
     
     
-    static func signInUser(completion: @escaping (Bool) -> Void) {
+    static func signInUser(with email: String, and password: String, completion: @escaping (Bool) -> Void) {
         
     }
     
@@ -53,23 +55,23 @@ class UserController {
         
     }
     
-    static func deleteUser(completion: @escaping (Bool) -> Void) {
+    static func deleteUser(with email: String, and password: String, completion: @escaping (Bool) -> Void) {
     
     }
     
-    static func updateEmail(completion: @escaping (Bool) -> Void) {
+    static func updateEmail(with email: String, and password: String, completion: @escaping (Bool) -> Void) {
         
     }
     
-    static func updateName(completion: @escaping (Bool) -> Void) {
+    static func updateName(with name: String, completion: @escaping (Bool) -> Void) {
         
     }
     
-    static func changePassword(completion: @escaping (Bool) -> Void) {
+    static func changePassword(with email: String, and password: String, completion: @escaping (Bool) -> Void) {
         
     }
     
-    static func updateStats(completion: @escaping (Bool) -> Void) {
+    static func updateStats(for user: User, completion: @escaping (Bool) -> Void) {
         
     }
     

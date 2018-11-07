@@ -11,24 +11,34 @@ import Firebase
 
 struct MeditationController {
     
-    static let shared = MeditationController()
     
         // MARK: - Properties
     
-    var meditations = [String]()
+    var meditations   = [Meditation]()
+    let categoriesRef = FIRESTORE.collection(MEDITATIONS).whereField(CATEGORIES, isEqualTo: true)
+    static let shared = MeditationController()
     
     
         // MARK: - Methods
     
     func getCategoryMeditations(completion: @escaping (Bool) -> Void) {
+        categoriesRef.getDocuments { (querySnapshot, error) in
+            if let error = error {
+                print("❌ ERROR in \(#file), \(#function), \(error),\(error.localizedDescription) ❌")
+            } else {
+                for document in querySnapshot!.documents {
+//                    meditations.append(document)
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
+    }
+    
+    func getMeditationURL(completion: @escaping (Bool) -> Void) {
         
     }
     
-    func getMeditaionURL(completion: @escaping (Bool) -> Void) {
-        
-    }
-    
-    func streamAudio(completion: @escaping (Bool) -> Void) {
+    func streamMeditationAudio(completion: @escaping (Bool) -> Void) {
         
     }
     
