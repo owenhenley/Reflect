@@ -17,11 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
-        let db = Firestore.firestore()
-        let settings = db.settings
+        let settings = FIRESTORE.settings
         settings.areTimestampsInSnapshotsEnabled = true
-        db.settings = settings
+        FIRESTORE.settings = settings
+        
+        MeditationController.shared.getCategoryMeditations { (done) in
+        }
+        
         
         return true
     }

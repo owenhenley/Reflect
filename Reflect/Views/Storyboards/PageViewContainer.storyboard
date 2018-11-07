@@ -192,7 +192,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="137" height="97"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation2" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-gj-7EF">
+                                                                    <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation2" translatesAutoresizingMaskIntoConstraints="NO" id="tXF-gj-7EF">
                                                                         <rect key="frame" x="0.0" y="0.0" width="137" height="69"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*meditation name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYC-nF-rWe">
