@@ -16,10 +16,9 @@
 		3E172567216B018700DF13F4 /* PlayMeditationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172566216B018700DF13F4 /* PlayMeditationVC.swift */; };
 		3E172569216B019800DF13F4 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E172568216B019800DF13F4 /* ProfileVC.swift */; };
 		3E17256F216B080700DF13F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E17256E216B080700DF13F4 /* GoogleService-Info.plist */; };
-		3E2D03AB2189149C00459252 /* practiceTests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D03AA2189149C00459252 /* practiceTests.storyboard */; };
-		3E2D03AD218914BD00459252 /* practiceTestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D03AC218914BD00459252 /* practiceTestsViewController.swift */; };
 		3E2D03AF2189173C00459252 /* FirebaseStorageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */; };
 		3E2D03B1218917C100459252 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D03B0218917C100459252 /* Constants.swift */; };
+		3E4473382193B64200D8C40F /* MeditationsScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4473372193B64200D8C40F /* MeditationsScrollVC.swift */; };
 		3E5C9E55218B79750036315C /* MeditationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C9E54218B79750036315C /* MeditationCategory.swift */; };
 		3E6E03FC2188BE1800123C1D /* PageViewContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E6E03FB2188BE1800123C1D /* PageViewContainer.storyboard */; };
 		3EA5CB1A21889793006AB0A6 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3EA5CB1921889793006AB0A6 /* LoginScreen.storyboard */; };
@@ -70,10 +69,9 @@
 		3E172566216B018700DF13F4 /* PlayMeditationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMeditationVC.swift; sourceTree = "<group>"; };
 		3E172568216B019800DF13F4 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		3E17256E216B080700DF13F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3E2D03AA2189149C00459252 /* practiceTests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = practiceTests.storyboard; sourceTree = "<group>"; };
-		3E2D03AC218914BD00459252 /* practiceTestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practiceTestsViewController.swift; sourceTree = "<group>"; };
 		3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageHelper.swift; sourceTree = "<group>"; };
 		3E2D03B0218917C100459252 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3E4473372193B64200D8C40F /* MeditationsScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationsScrollVC.swift; sourceTree = "<group>"; };
 		3E5C9E54218B79750036315C /* MeditationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationCategory.swift; sourceTree = "<group>"; };
 		3E6E03FB2188BE1800123C1D /* PageViewContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PageViewContainer.storyboard; sourceTree = "<group>"; };
 		3EA5CB1921889793006AB0A6 /* LoginScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginScreen.storyboard; sourceTree = "<group>"; };
@@ -136,11 +134,11 @@
 		3E172561216B00AF00DF13F4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				3EE0E8AE2148966C005A798A /* LaunchScreen.storyboard */,
 				3E17255D216AFED700DF13F4 /* CustomTabBar.storyboard */,
+				3EE0E8AE2148966C005A798A /* LaunchScreen.storyboard */,
+				3EA5CB1921889793006AB0A6 /* LoginScreen.storyboard */,
 				3E6E03FB2188BE1800123C1D /* PageViewContainer.storyboard */,
 				3E17255F216AFF2200DF13F4 /* PlayMeditation.storyboard */,
-				3EA5CB1921889793006AB0A6 /* LoginScreen.storyboard */,
 				3E172559216AFC1300DF13F4 /* SignUpScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -149,8 +147,8 @@
 		3E6E03FD2188F19600123C1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */,
 				3E2D03B0218917C100459252 /* Constants.swift */,
+				3E2D03AE2189173C00459252 /* FirebaseStorageHelper.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -158,12 +156,12 @@
 		3EE0E8992148966A005A798A = {
 			isa = PBXGroup;
 			children = (
+				BEB05E7F5AA1666260BFD395 /* Frameworks */,
+				8F39ECD8490B6FFD4A6B2F92 /* Pods */,
+				3EE0E8A32148966A005A798A /* Products */,
 				3EE0E8A42148966A005A798A /* Reflect */,
 				3EE0E8B92148966C005A798A /* ReflectTests */,
 				3EE0E8C42148966C005A798A /* ReflectUITests */,
-				3EE0E8A32148966A005A798A /* Products */,
-				8F39ECD8490B6FFD4A6B2F92 /* Pods */,
-				BEB05E7F5AA1666260BFD395 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,12 +178,12 @@
 		3EE0E8A42148966A005A798A /* Reflect */ = {
 			isa = PBXGroup;
 			children = (
+				3EE0E8D5214896D9005A798A /* Controllers */,
 				3EE0E8DB214898A6005A798A /* Extensions */,
 				3EE0E8D3214896BE005A798A /* Models */,
-				3EE0E8D5214896D9005A798A /* Controllers */,
-				3EE0E8D4214896CB005A798A /* Views */,
-				3E6E03FD2188F19600123C1D /* Supporting Files */,
 				3EE0E8D921489888005A798A /* Resources */,
+				3E6E03FD2188F19600123C1D /* Supporting Files */,
+				3EE0E8D4214896CB005A798A /* Views */,
 			);
 			path = Reflect;
 			sourceTree = "<group>";
@@ -193,8 +191,8 @@
 		3EE0E8B92148966C005A798A /* ReflectTests */ = {
 			isa = PBXGroup;
 			children = (
-				3EE0E8BA2148966C005A798A /* ReflectTests.swift */,
 				3EE0E8BC2148966C005A798A /* Info.plist */,
+				3EE0E8BA2148966C005A798A /* ReflectTests.swift */,
 			);
 			path = ReflectTests;
 			sourceTree = "<group>";
@@ -202,8 +200,8 @@
 		3EE0E8C42148966C005A798A /* ReflectUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3EE0E8C52148966C005A798A /* ReflectUITests.swift */,
 				3EE0E8C72148966C005A798A /* Info.plist */,
+				3EE0E8C52148966C005A798A /* ReflectUITests.swift */,
 			);
 			path = ReflectUITests;
 			sourceTree = "<group>";
@@ -211,9 +209,9 @@
 		3EE0E8D3214896BE005A798A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3EC5E9F021879B1300237252 /* User.swift */,
 				3EC5E9F221879B1D00237252 /* Meditation.swift */,
 				3E5C9E54218B79750036315C /* MeditationCategory.swift */,
+				3EC5E9F021879B1300237252 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,8 +219,8 @@
 		3EE0E8D4214896CB005A798A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3E172561216B00AF00DF13F4 /* Storyboards */,
 				3EE0E8D6214896E6005A798A /* Custom Views */,
+				3E172561216B00AF00DF13F4 /* Storyboards */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,8 +237,8 @@
 		3EE0E8D6214896E6005A798A /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				3EC5E9F82187AC3800237252 /* MeditationTableCell.swift */,
 				3EC5E9FC2187AC6100237252 /* MeditationCollectionCell.swift */,
+				3EC5E9F82187AC3800237252 /* MeditationTableCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -249,12 +247,13 @@
 			isa = PBXGroup;
 			children = (
 				3EC5EA022187C83500237252 /* CustomTabBar.swift */,
-				3EC5EA042187C8A500237252 /* MainPageView.swift */,
-				3EC5EA062187C8F100237252 /* MeditationsVC.swift */,
-				3E172568216B019800DF13F4 /* ProfileVC.swift */,
-				3E172566216B018700DF13F4 /* PlayMeditationVC.swift */,
-				3E172562216B013B00DF13F4 /* SignUpVC.swift */,
 				3E172564216B015100DF13F4 /* LoginVC.swift */,
+				3EC5EA042187C8A500237252 /* MainPageView.swift */,
+				3E4473372193B64200D8C40F /* MeditationsScrollVC.swift */,
+				3EC5EA062187C8F100237252 /* MeditationsVC.swift */,
+				3E172566216B018700DF13F4 /* PlayMeditationVC.swift */,
+				3E172568216B019800DF13F4 /* ProfileVC.swift */,
+				3E172562216B013B00DF13F4 /* SignUpVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -262,8 +261,8 @@
 		3EE0E8D8214896FC005A798A /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3EC5E9F421879B2A00237252 /* UserController.swift */,
 				3EC5E9F621879B3800237252 /* MeditationController.swift */,
+				3EC5E9F421879B2A00237252 /* UserController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -271,12 +270,10 @@
 		3EE0E8D921489888005A798A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3E2D03AA2189149C00459252 /* practiceTests.storyboard */,
-				3E2D03AC218914BD00459252 /* practiceTestsViewController.swift */,
-				3EE0E8AC2148966C005A798A /* Assets.xcassets */,
 				3EE0E8A52148966A005A798A /* AppDelegate.swift */,
-				3EE0E8B12148966C005A798A /* Info.plist */,
+				3EE0E8AC2148966C005A798A /* Assets.xcassets */,
 				3E17256E216B080700DF13F4 /* GoogleService-Info.plist */,
+				3EE0E8B12148966C005A798A /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -432,7 +429,6 @@
 				3EE0E8AD2148966C005A798A /* Assets.xcassets in Resources */,
 				3E172560216AFF2200DF13F4 /* PlayMeditation.storyboard in Resources */,
 				3E6E03FC2188BE1800123C1D /* PageViewContainer.storyboard in Resources */,
-				3E2D03AB2189149C00459252 /* practiceTests.storyboard in Resources */,
 				3E17255E216AFED700DF13F4 /* CustomTabBar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,13 +588,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EC5E9F521879B2A00237252 /* UserController.swift in Sources */,
+				3E4473382193B64200D8C40F /* MeditationsScrollVC.swift in Sources */,
 				3E5C9E55218B79750036315C /* MeditationCategory.swift in Sources */,
 				3E2D03B1218917C100459252 /* Constants.swift in Sources */,
 				3EC5E9FE2187AC6100237252 /* MeditationCollectionCell.swift in Sources */,
 				3E172569216B019800DF13F4 /* ProfileVC.swift in Sources */,
 				3EC5E9F321879B1D00237252 /* Meditation.swift in Sources */,
 				3EC5EA032187C83500237252 /* CustomTabBar.swift in Sources */,
-				3E2D03AD218914BD00459252 /* practiceTestsViewController.swift in Sources */,
 				3E172563216B013B00DF13F4 /* SignUpVC.swift in Sources */,
 				3EC5E9FA2187AC3800237252 /* MeditationTableCell.swift in Sources */,
 				3EC5E9F121879B1300237252 /* User.swift in Sources */,
@@ -650,6 +646,7 @@
 				3EE0E8AF2148966C005A798A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
