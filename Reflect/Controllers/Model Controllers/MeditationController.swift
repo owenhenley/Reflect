@@ -34,6 +34,34 @@ struct MeditationController {
         }
     }
     
+    func getBodyScans(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    func getBreifs(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    func getMindfullMovement(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    func getMindfullnessOfBreath(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    func getMountainMeditations(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    func getSelfGuided(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    func getSittingMeditations(completion: @escaping (Bool) -> Void) {
+        
+    }
+    
     func getMeditationURL(completion: @escaping (Bool) -> Void) {
         
     }
